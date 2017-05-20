@@ -17,6 +17,7 @@ protected:
 	}
 	void Window_Open(Win::Event& e);
 	double Profit(int ticketCount, double ticketCost);
+	double MostrarArea(double ancho, double alto);
 	void GetDialogTemplate(DLGTEMPLATE& dlgTemplate)
 	{
 		dlgTemplate.style = DS_CENTER | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU;

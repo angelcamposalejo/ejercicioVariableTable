@@ -8,20 +8,12 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE , LPTSTR cmdLine, int cmdSh
 
 void EjericicioTableVariables::Window_Open(Win::Event& e)
 {
-	double philMoney = 0.0;
-	double tessMoney = 0.0;
-	philMoney = Profit(10, 55.50);
-	tessMoney = Profit(2, 150.50);
-	wstring text;
-	Sys::Format(text, L"%g,%g", philMoney, tessMoney);
-	this->MessageBox(text, L"Program", MB_OK);
+	wstring texto;
+	texto = Sys::Convert::ToString(MostrarArea(100, 2.4));
+	this->MessageBox(texto, L"Area", MB_OK);
 }
-double EjericicioTableVariables::Profit(int ticketCount, double ticketCost)
+double EjericicioTableVariables::MostrarArea(double ancho, double alto)
 {
-	if (ticketCount < 5)
-	{
-		return ticketCount*ticketCost;
-	}
-	return ticketCount*ticketCost+1000.0;
+	return ancho*alto;
 }
 
